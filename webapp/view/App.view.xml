@@ -4,9 +4,12 @@
    xmlns:mvc='sap.ui.core.mvc'>
 
    <Button
-      text='Say Hello'
+      text='{i18n>showHelloButtonText}'
       press='.onShowHello'/>
 
+   <!--The curly brackets {…} indicate that data is taken from the value of the 
+   recipient's object name property. This is called "data binding".
+   -->
    <Input
       value='{/recipient/name}'
       description='Hello {/recipient/name}'
