@@ -35,14 +35,17 @@
         data-sap-ui-onInit="module:sap/ui/demo/walkthrough/index"
         data-sap-ui-resourceroots='{
             "sap.ui.demo.walkthrough": "./"
-        }'>
+        }'
+        data-sap-ui-oninit="module:sap/ui/core/ComponentSupport">
     </script>
 
 </head>
 
 <!-- The class sapUiBody adds additional theme-dependent styles for displaying SAPUI5 apps. -->
 <body class="sapUiBody" id="content">
-
+    <div data-sap-ui-component data-name="sap.ui.demo.walkthrough" 
+            data-id="container" 
+            data-settings='{"id" : "walkthrough"}'></div>
 </body>
 
 </html>
