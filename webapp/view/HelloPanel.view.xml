@@ -1,0 +1,31 @@
+<mvc:View
+    controllerName='sap.ui.demo.walkthrough.controller.HelloPanel'
+    xmlns='sap.m'
+    xmlns:mvc='sap.ui.core.mvc'>
+    <!--class sapUiResponsiveMargin that will add some space around the panel. We have to set 
+    the width of the panel to auto since the margin would otherwise be 
+    added to the default width of 100% and exceed the page size. -->
+    <Panel headerText='{i18n>helloPanelTitle}'
+            class='sapUiResponsiveMargin'
+            width='auto'>
+        <content>
+            <Button
+                text='{i18n>showHelloButtonText}'
+                press='.onShowHello'
+                class='myCustomButton'/>
+
+            <!--The curly brackets {…} indicate that data is taken from the value of the 
+            recipient's object name property. This is called "data binding".-->
+            <Input
+                value='{/recipient/name}'
+                description='Hello {/recipient/name}'
+                valueLiveUpdate='true'
+                width='60%'/>
+            <FormattedText
+                htmlText='Hello {/recipient/name}'
+                class='sapUiSmallMargin 
+                        sapThemeHighlight-asColor 
+                        myCustomText'/>
+        </content>
+    </Panel>
+</mvc:View>
