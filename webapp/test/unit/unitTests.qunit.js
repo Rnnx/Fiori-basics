@@ -6,6 +6,6 @@ sap.ui.getCore().attachInit(function () {
 	sap.ui.require([
 		'sap/ui/demo/walkthrough/test/unit/model/formatter'
 	], function () {
-		QUnit.start();
-	});
-});
+		QUnit.start()
+	})
+})
